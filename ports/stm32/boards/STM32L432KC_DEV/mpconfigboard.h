@@ -1,4 +1,4 @@
-#define MICROPY_HW_BOARD_NAME       "NUCLEO-L432KC"
+#define MICROPY_HW_BOARD_NAME       "STM32L432KC_DEV"
 #define MICROPY_HW_MCU_NAME         "STM32L432KC"
 
 #define MICROPY_EMIT_THUMB          (0)
@@ -12,13 +12,23 @@
 #define MICROPY_PY_UHEAPQ           (0)
 #define MICROPY_PY_UTIMEQ           (0)
 
-#define MICROPY_HW_ENABLE_INTERNAL_FLASH_STORAGE (0)
-#define MICROPY_HW_ENABLE_RTC       (1)
-#define MICROPY_HW_ENABLE_ADC       (1)
-#define MICROPY_HW_ENABLE_DAC       (1)
-#define MICROPY_HW_ENABLE_USB       (0) // requires a custom USB connector on PA11/PA12
+#define MICROPY_PY_UZLIB            (0)
+#define MICROPY_PY_URE              (0)
+#define MICROPY_PY_URE_SUB          (0)
+#define MICROPY_PY_UJSON            (0)
+#define MICROPY_PY_UHASHLIB         (0)
+#define MICROPY_PY_UBINASCII        (0)
+#define MICROPY_PY_FRAMEBUF         (0)
+//#define MICROPY_PY_USELECT          (0)
+
+#define MICROPY_HW_ENABLE_INTERNAL_FLASH_STORAGE (1)
+#define MICROPY_HW_ENABLE_RTC       (0)
+#define MICROPY_HW_ENABLE_ADC       (0)
+#define MICROPY_HW_ENABLE_DAC       (0)
+#define MICROPY_HW_ENABLE_USB       (1) // using a custom USB connector on PA11/PA12
 #define MICROPY_HW_ENABLE_TIMER     (1)
 #define MICROPY_HW_HAS_SWITCH       (0)
+#define MICROPY_HW_HAS_FLASH        (1)
 
 // MSI is used and is 4MHz
 #define MICROPY_HW_CLK_PLLM (1)
@@ -27,8 +37,14 @@
 #define MICROPY_HW_CLK_PLLP (7)
 #define MICROPY_HW_CLK_PLLQ (2)
 
-// The board has an external 32kHz crystal
-#define MICROPY_HW_RTC_USE_LSE      (1)
+// The board has NO external 32kHz crystal
+// not a thing: #define MICROPY_HW_CLK_USE_LSE      (0)
+// The board has NO external high speed crystal
+#define MICROPY_HW_CLK_USE_HSE      (0)
+// The board has NO external 32kHz crystal
+#define MICROPY_HW_RTC_USE_LSE      (0)
+// The board has NO external high speed crystal
+// not a thing #define MICROPY_HW_RTC_USE_HSE      (0)
 
 // UART config
 #define MICROPY_HW_UART1_TX     (pin_B6)
@@ -64,7 +80,7 @@
 
 // USB config
 #define MICROPY_HW_USB_FS           (MICROPY_HW_ENABLE_USB)
-#define MICROPY_HW_USB_MSC          (0)
+#define MICROPY_HW_USB_MSC          (1)
 #define MICROPY_HW_USB_HID          (0)
 #define USBD_CDC_RX_DATA_SIZE       (256)
 #define USBD_CDC_TX_DATA_SIZE       (256)
