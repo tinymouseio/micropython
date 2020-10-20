@@ -37,14 +37,10 @@
 #define MICROPY_HW_CLK_PLLP (7)
 #define MICROPY_HW_CLK_PLLQ (2)
 
-// The board has NO external 32kHz crystal
-// not a thing: #define MICROPY_HW_CLK_USE_LSE      (0)
 // The board has NO external high speed crystal
 #define MICROPY_HW_CLK_USE_HSE      (0)
 // The board has NO external 32kHz crystal
 #define MICROPY_HW_RTC_USE_LSE      (0)
-// The board has NO external high speed crystal
-// not a thing #define MICROPY_HW_RTC_USE_HSE      (0)
 
 // UART config
 #define MICROPY_HW_UART1_TX     (pin_B6)
