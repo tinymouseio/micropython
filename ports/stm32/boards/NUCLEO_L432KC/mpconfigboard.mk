@@ -5,7 +5,7 @@ LD_FILES = boards/stm32l432.ld boards/common_basic.ld
 OPENOCD_CONFIG = boards/openocd_stm32l4.cfg
 
 # MicroPython settings
-MICROPY_VFS_FAT = 0
+MICROPY_VFS_FAT = 1
 
 # Don't include default frozen modules because MCU is tight on flash space
 FROZEN_MANIFEST ?=

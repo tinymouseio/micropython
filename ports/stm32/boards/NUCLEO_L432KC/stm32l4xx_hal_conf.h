@@ -7,6 +7,9 @@
 
 #include "boards/stm32l4xx_hal_conf_base.h"
 
+//#undef HAL_RCC_MODULE_ENABLED
+
+
 // Oscillator values in Hz
 #define HSE_VALUE (8000000)
 #define LSE_VALUE (32768)
