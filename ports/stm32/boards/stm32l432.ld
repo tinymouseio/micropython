@@ -5,8 +5,8 @@
 /* Specify the memory areas */
 MEMORY
 {
-    FLASH (rx)      : ORIGIN = 0x08000000, LENGTH = 228K
-    FLASH_FS (r)    : ORIGIN = 0x08039000, LENGTH = 28K
+    FLASH (rx)      : ORIGIN = 0x08000000, LENGTH = 230K
+    FLASH_FS (r)    : ORIGIN = 0x08039800, LENGTH = 26K
     RAM (xrw)       : ORIGIN = 0x20000000, LENGTH = 64K /* SRAM1, 48K + SRAM2, 16K */
 }
 
